@@ -11,7 +11,7 @@
     "debug": "nodemon --inspect src/index.ts"
   },
   "engines": {
-    "node": "14"
+    "node": "14.20.0"
   },
   "author": "Deepak B",
   "dependencies": {
