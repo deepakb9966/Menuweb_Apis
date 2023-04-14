@@ -92,7 +92,7 @@ export class subCategoriesService{
 				// const patient = await this._checkUserExists(request.patientId);
 				await categoriesRef.set({
 					...categoriesRequest,
-					Status: true,
+					// Status: true,
 				});
 				return {
 					status: 201,

@@ -1,0 +1,135 @@
+[debug] [2023-04-10T16:09:51.720Z] ----------------------------------------------------------------------
+[debug] [2023-04-10T16:09:51.722Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-04-10T16:09:51.722Z] CLI Version:   11.25.3
+[debug] [2023-04-10T16:09:51.723Z] Platform:      win32
+[debug] [2023-04-10T16:09:51.723Z] Node Version:  v16.18.1
+[debug] [2023-04-10T16:09:51.723Z] Time:          Mon Apr 10 2023 21:39:51 GMT+0530 (India Standard Time)
+[debug] [2023-04-10T16:09:51.724Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-04-10T16:09:51.795Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-04-10T16:09:51.796Z] > authorizing via signed-in user (powermindsoffical@gmail.com)
+[debug] [2023-04-10T16:09:51.796Z] [iam] checking project menucard-b58c4 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-04-10T16:09:51.799Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/menucard-b58c4:testIamPermissions [none]
+[debug] [2023-04-10T16:09:51.799Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/menucard-b58c4:testIamPermissions x-goog-quota-user=projects/menucard-b58c4
+[debug] [2023-04-10T16:09:51.799Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/menucard-b58c4:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-04-10T16:09:53.566Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/menucard-b58c4:testIamPermissions 200
+[debug] [2023-04-10T16:09:53.566Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/menucard-b58c4:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-04-10T16:09:53.567Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/menucard-b58c4/serviceAccounts/menucard-b58c4@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-04-10T16:09:53.567Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/menucard-b58c4/serviceAccounts/menucard-b58c4@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-04-10T16:09:55.036Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/menucard-b58c4/serviceAccounts/menucard-b58c4@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2023-04-10T16:09:55.036Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/menucard-b58c4/serviceAccounts/menucard-b58c4@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-04-10T16:09:55.037Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/menucard-b58c4 [none]
+[debug] [2023-04-10T16:09:55.640Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/menucard-b58c4 200
+[debug] [2023-04-10T16:09:55.640Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/menucard-b58c4 {"projectId":"menucard-b58c4","projectNumber":"350399157871","displayName":"Menucard","name":"projects/menucard-b58c4","resources":{"hostingSite":"menucard-b58c4","storageBucket":"menucard-b58c4.appspot.com","locationId":"asia-south1"},"state":"ACTIVE","etag":"1_05f1bfc7-2f05-4699-bb39-c6157b3bbdd3"}
+[info] 
+[info] === Deploying to 'menucard-b58c4'...
+[info] 
+[info] i  deploying functions, hosting 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run build
+[info] +  functions: Finished running predeploy script. 
+[debug] [2023-04-10T16:09:59.540Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/menucard-b58c4 [none]
+[debug] [2023-04-10T16:10:00.395Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/menucard-b58c4 200
+[debug] [2023-04-10T16:10:00.395Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/menucard-b58c4 {"projectId":"menucard-b58c4","projectNumber":"350399157871","displayName":"Menucard","name":"projects/menucard-b58c4","resources":{"hostingSite":"menucard-b58c4","storageBucket":"menucard-b58c4.appspot.com","locationId":"asia-south1"},"state":"ACTIVE","etag":"1_05f1bfc7-2f05-4699-bb39-c6157b3bbdd3"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2023-04-10T16:10:00.402Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/menucard-b58c4/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-04-10T16:10:00.402Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/menucard-b58c4/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/menucard-b58c4
+[debug] [2023-04-10T16:10:00.403Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/menucard-b58c4/services/runtimeconfig.googleapis.com [none]
+[debug] [2023-04-10T16:10:00.404Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/menucard-b58c4/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/menucard-b58c4
+[debug] [2023-04-10T16:10:00.405Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/menucard-b58c4/services/cloudbuild.googleapis.com [none]
+[debug] [2023-04-10T16:10:00.405Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/menucard-b58c4/services/cloudbuild.googleapis.com x-goog-quota-user=projects/menucard-b58c4
+[debug] [2023-04-10T16:10:00.406Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/menucard-b58c4/services/artifactregistry.googleapis.com [none]
+[debug] [2023-04-10T16:10:00.406Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/menucard-b58c4/services/artifactregistry.googleapis.com x-goog-quota-user=projects/menucard-b58c4
+[debug] [2023-04-10T16:10:02.243Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/menucard-b58c4/services/runtimeconfig.googleapis.com 200
+[debug] [2023-04-10T16:10:02.243Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/menucard-b58c4/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2023-04-10T16:10:02.246Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/menucard-b58c4/services/artifactregistry.googleapis.com 200
+[debug] [2023-04-10T16:10:02.246Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/menucard-b58c4/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2023-04-10T16:10:02.249Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/menucard-b58c4/services/cloudfunctions.googleapis.com 200
+[debug] [2023-04-10T16:10:02.249Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/menucard-b58c4/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2023-04-10T16:10:02.270Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/menucard-b58c4/services/cloudbuild.googleapis.com 200
+[debug] [2023-04-10T16:10:02.270Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/menucard-b58c4/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2023-04-10T16:10:02.271Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/menucard-b58c4/adminSdkConfig [none]
+[debug] [2023-04-10T16:10:02.961Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/menucard-b58c4/adminSdkConfig 200
+[debug] [2023-04-10T16:10:02.961Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/menucard-b58c4/adminSdkConfig {"projectId":"menucard-b58c4","storageBucket":"menucard-b58c4.appspot.com","locationId":"asia-south1"}
+[debug] [2023-04-10T16:10:02.962Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/menucard-b58c4/configs [none]
+[debug] [2023-04-10T16:10:03.636Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/menucard-b58c4/configs 200
+[debug] [2023-04-10T16:10:03.637Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/menucard-b58c4/configs {}
+[debug] [2023-04-10T16:10:03.640Z] Validating nodejs source
+[debug] [2023-04-10T16:10:05.835Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "generate": "rimraf dist && openapi-generator-plus -c config.yaml",
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "dev": "nodemon src/index.ts",
+    "start": "node build/src/index.js",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/src/index.js",
+  "dependencies": {
+    "@openapitools/openapi-generator-cli": "^2.5.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "firebase": "^9.14.0",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.1",
+    "morgan": "^1.10.0",
+    "passport": "^0.6.0",
+    "passport-http-bearer": "^1.0.1",
+    "socket.io": "^4.5.4",
+    "swagger-ui-express": "^4.5.0",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "@openapi-generator-plus/typescript-express-passport-server-generator": "^2.6.0",
+    "@tsconfig/node16": "^1.0.3",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.14",
+    "@types/express-session": "^1.17.5",
+    "@types/morgan": "^1.9.3",
+    "@types/node": "^18.11.0",
+    "@types/passport": "^1.0.11",
+    "@types/passport-http-bearer": "^1.0.37",
+    "@types/swagger-ui-express": "^4.1.3",
+    "@types/yamljs": "^0.2.31",
+    "@typescript-eslint/eslint-plugin": "^5.40.0",
+    "@typescript-eslint/parser": "^5.40.0",
+    "eslint": "^8.37.0",
+    "firebase-functions-test": "^3.0.0",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2023-04-10T16:10:05.836Z] Building nodejs source
+[debug] [2023-04-10T16:10:05.837Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-04-10T16:10:05.846Z] Found firebase-functions binary at 'C:\Users\deepa\Documents\myfolders\menu_web\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-04-10T16:10:06.107Z] Serving at port 8304
+
+[debug] [2023-04-10T16:10:07.109Z] FetchError: request to http://localhost:8304/__/quitquitquit failed, reason: connect ECONNREFUSED 127.0.0.1:8304
+    at ClientRequest.<anonymous> (C:\Users\deepa\AppData\Roaming\nvm\v16.18.1\node_modules\firebase-tools\node_modules\node-fetch\lib\index.js:1491:11)
+    at ClientRequest.emit (node:events:513:28)
+    at ClientRequest.emit (node:domain:489:12)
+    at Socket.socketErrorListener (node:_http_client:494:9)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    at emitErrorNT (node:internal/streams/destroy:157:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: An unexpected error has occurred.

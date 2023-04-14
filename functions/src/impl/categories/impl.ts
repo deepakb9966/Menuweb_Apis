@@ -90,7 +90,7 @@ export class categoriesService{
 				// const patient = await this._checkUserExists(request.patientId);
 				await categoriesRef.set({
 					...categoriesRequest,
-					CategorieStatus: true,
+					// CategorieStatus: true,
 				});
 				return {
 					status: 201,

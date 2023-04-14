@@ -1,5 +1,6 @@
 
 import * as admin from "firebase-admin";
+// import {initializeApp} from "firebase-admin/app";
 import * as serviceAccount from "./key.json";
 // console.log(serviceAccount);
 admin.initializeApp({

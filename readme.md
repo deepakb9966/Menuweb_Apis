@@ -16,3 +16,7 @@ yarn dev
 
 The API generator is configured in `config.yml`. See [`@openapi-generator-plus/typescript-express-passport-server-generator`](https://github.com/karlvr/openapi-generator-plus-express-passport#readme) for configuration options.
 
+Test the apis with firebase emulator
+```shell
+firebase emulators:start
+```

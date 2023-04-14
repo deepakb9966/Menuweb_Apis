@@ -8,6 +8,7 @@ import cors from "cors";
 import swaggerUi from "swagger-ui-express";
 import serviceApi from "../dist";
 import { ServiceImplementation } from "./impl";
+
 import * as functions from "firebase-functions";
 dotenv.config();
 
@@ -44,4 +45,5 @@ const PORT: number = Number(process.env.PORT) || 8082;
 
 const httpServer = http.createServer(app);
 exports.app=functions.https.onRequest(app);
-// httpServer.listen(PORT, () => console.log(`Service running at http://localhost:${PORT}/`));
+// export const app1 = functions.https.onRequest(app);
+httpServer.listen(PORT, () => console.log(`Service running at http://localhost:${PORT}/`));
