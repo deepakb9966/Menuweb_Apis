@@ -1,6 +1,6 @@
 # Patient Service
 
-This project provides api for patient service.
+This project provides api for menuweb
 
 The generator template used is [`@openapi-generator-plus/typescript-express-passport-server-generator`](https://github.com/karlvr/openapi-generator-plus-express-passport#readme).
 
